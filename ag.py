@@ -69,6 +69,8 @@ class Atlas(object):
 
         if not result:
             self.missed.append(img)
+            
+            print 'missed `%s`' % img.filename.split('/')[-1]
         else:
             self.positions.append({'img': img, 'pos': result})
 
